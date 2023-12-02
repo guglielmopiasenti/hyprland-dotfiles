@@ -1,0 +1,92 @@
+/* 
+              888                                     888    
+              888                                     888    
+              888                                     888    
+888  888  888 888  .d88b.   .d88b.   .d88b.  888  888 888888 
+888  888  888 888 d88""88b d88P"88b d88""88b 888  888 888    
+888  888  888 888 888  888 888  888 888  888 888  888 888    
+Y88b 888 d88P 888 Y88..88P Y88b 888 Y88..88P Y88b 888 Y88b.  
+ "Y8888888P"  888  "Y88P"   "Y88888  "Y88P"   "Y88888  "Y888 
+                                888                          
+                           Y8b d88P                          
+                            "Y88P"           
+by Guglielmo Piasenti
+----------------------------------------------------- 
+ */
+
+
+
+ /* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+	background-image: none;
+}
+
+window {
+	background-color: rgba(18, 22, 30, 0.2);
+}
+button {
+    color: #FFFFFF;
+	background-color: #12161E;
+	border-style:solid;
+	border-radius: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	font-size: 25px;
+	font-weight: 600;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 10px;
+}
+
+button:focus, button:active, button:hover {
+	background-color: #2B568D;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.24);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    outline-style: none;
+}
+
+/* 
+----------------------------------------------------- 
+Buttons
+----------------------------------------------------- 
+*/
+
+#lock {
+	margin: 10px;
+	border-radius: 20px;
+	background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+	margin: 10px;
+	border-radius: 20px;
+	background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+	margin: 10px;
+	border-radius: 20px;
+	background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+	margin: 10px;
+	border-radius: 20px;
+	background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+	margin: 10px;
+	border-radius: 20px;
+	background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+	margin: 10px;
+	border-radius: 20px;
+	background-image: image(url("icons/reboot.png"));
+}
+
