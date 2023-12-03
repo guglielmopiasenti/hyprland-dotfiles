@@ -192,6 +192,19 @@ yay -S sddm-git
 
 After rebooting, SDDM should be operational as your display manager, presenting a graphical login interface at startup.
 
+# Weather app
+
+to set it, first you need to:
+
+```
+chmod u+x /home/yourusername/.config/waybar/scripts/waybar-wttr.py
+```
+
+```
+sudo pacman -S python python-requests
+```
+
+
 
 # You should be good to go!
 
