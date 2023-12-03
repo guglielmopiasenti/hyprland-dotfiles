@@ -5,6 +5,8 @@ EndeavourOS X Hyprland - Bioluminaut - by Guglielmo Piasenti
 
 ![Alt text](Screenshot_2023-12-02_19-41-39.png)
 
+(I will add in the future an auto installer script. For the moment you can follow the guide to install Hyprland and then copy my dotfiles)
+
 Welcome! This is a comprehensive guide on how to install Hyprland and use my dotfiles.
 If I forgot any step or you feel unsure about something written in this guide, feel free to check out the official hyprland guide at : https://wiki.hyprland.org/Getting-Started/Master-Tutorial/
 
