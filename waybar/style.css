@@ -43,9 +43,17 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
 }
 
+tooltip {
+  background-color: #000000;
+  border-radius: 20px;
+  border-color: #000000;
+}
+
+tooltip label {
+  padding: 5px;
+}
 #window {
   padding: 50px;
 }
@@ -54,9 +62,9 @@ button:hover {
 #window {
   padding: 5px 10px;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.64);
+  background: rgb(0, 0, 0);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 #workspaces button {
@@ -106,9 +114,9 @@ button:hover {
 #custom-updates {
   padding: 0 10px;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.64);
+  background: rgb(0, 0, 0);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 #window,
@@ -138,16 +146,15 @@ label:focus {
 }
 
 #network {
-  background-color: rgba(0, 252, 152, 0.64);
+  color: rgb(0, 252, 152);
 }
 
 #network.disconnected {
-  background-color: rgba(250, 38, 51, 0.64);
+  color: rgb(250, 38, 51);
 }
 
 #pulseaudio {
-  background-color: rgba(253, 219, 3, 0.64);
-  color: #000000;
+  color: rgb(253, 219, 3);
 }
 
 #pulseaudio.muted {
@@ -242,11 +249,11 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgb(0, 0, 0);
 }
 
 #scratchpad {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgb(0, 0, 0);
 }
 
 #scratchpad.empty {
@@ -276,4 +283,5 @@ label:focus {
 
 #custom-exit {
   margin-right: 10px;
+  color: #fa3e41;
 }
