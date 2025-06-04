@@ -66,7 +66,7 @@ def format_time(time):
 
 
 def format_temp(temp):
-    return (hour['FeelsLikeC']+"°").ljust(3)
+    return (temp+"°").ljust(3)
 
 
 def format_chances(hour):
