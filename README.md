@@ -5,12 +5,12 @@ EndeavourOS X Hyprland - Bioluminaut - by Guglielmo Piasenti
 
 ![Alt text](Screenshot_2023-12-02_19-41-39.png)
 
-(I will add in the future an auto installer script. For the moment you can follow the guide to install Hyprland and then copy my dotfiles)
+(An auto installer script is planned but not yet available. For now you can follow this guide to install Hyprland and then copy my dotfiles.)
 
 Welcome! This is a comprehensive guide on how to install Hyprland and use my dotfiles.
-If I forgot any step or you feel unsure about something written in this guide, feel free to check out the official hyprland guide at : https://wiki.hyprland.org/Getting-Started/Master-Tutorial/
+If I forgot any step or you feel unsure about something written in this guide, feel free to check out the official Hyprland guide at: https://wiki.hyprland.org/Getting-Started/Master-Tutorial/
 
-I started from EndeavourOS with no de. This is how you can do it too: 
+I started from EndeavourOS without a desktop environment (DE). This is how you can do it too:
 # EndeavourOS Installation Guide (Without DE)
 
 This guide covers installing EndeavourOS without a pre-installed Desktop Environment.
@@ -84,7 +84,7 @@ This guide covers installing EndeavourOS without a pre-installed Desktop Environ
 Congratulations! You have successfully installed EndeavourOS without a Desktop Environment.
 
 # Hyprland installation Process:
-## 1 - Install Git and Base-devel 
+## 1 - Install Git and Base-devel
 
 If you haven’t already, you need to install `git` and the `base-devel` group, which includes tools required for building from source:
 
@@ -92,7 +92,18 @@ If you haven’t already, you need to install `git` and the `base-devel` group, 
 sudo pacman -S git base-devel
 ```
 
-## 2 - **Install Hyprland from AUR**: 
+## 2 - Install yay (AUR helper)
+
+If you don't already have an AUR helper, install **yay**:
+
+```bash
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+```
+
+## 3 - **Install Hyprland from AUR**:
 
 Once `yay` is installed, you can install Hyprland directly from the AUR:
 
@@ -106,13 +117,13 @@ yay -S hyprland-bin  # For the precompiled latest release
 
 I suggest going with **hyprland-git**
 
-### 3 - Install Kitty:
+## 4 - Install Kitty:
 ```
 sudo pacman -S kitty
 ```
-## 4 -  Running Hyprland: 
+## 5 -  Running Hyprland:
 After installation, you can start Hyprland directly from a TTY by running the command `hyprland`. At this point you'll be inside of the hyprland session! You can open a terminal with SUPER + Q.    
-## 5 - Configuration: 
+## 6 - Configuration:
 Copy the example configuration file to your home directory and adjust as needed:
 ```
 cp /usr/share/doc/hyprland/examples/hyprland.conf ~/.config/hyprland/
@@ -149,7 +160,7 @@ If you don't have a Waybar configuration folder in `~/.config`, you'll need to c
    nano ~/.config/waybar/style.css
    ```
 
-   Within the `config` file, you can configure various modules. in the style.css you can adjust the look.
+   Within the `config` file, you can configure various modules. In the `style.css` file you can adjust the look.
 
 4. **Check Module Configurations**: Make sure the modules in the Waybar configuration file are compatible with your environment and that all paths and commands are correct.
 
@@ -160,9 +171,9 @@ If you don't have a Waybar configuration folder in `~/.config`, you'll need to c
    waybar
    ```
 
-7. **Autostart Waybar: If you want Waybar to start automatically, you can add the following line to your `hyprland.conf` configuration file:
+7. **Autostart Waybar:** If you want Waybar to start automatically, add the following line to your `hyprland.conf` configuration file:
    ```bash
-   exec_once = waybar
+   exec-once = waybar
    ```
 
 # Authentication Agent
@@ -194,9 +205,21 @@ yay -S sddm-git
 
 After rebooting, SDDM should be operational as your display manager, presenting a graphical login interface at startup.
 
+# Screenshot script
+
+A small script for taking screenshots is available in the `scripts` folder. Copy it to `~/.config/scripts/` and make it executable:
+
+```bash
+mkdir -p ~/.config/scripts
+cp scripts/screenshot.sh ~/.config/scripts/
+chmod +x ~/.config/scripts/screenshot.sh
+```
+
+The script is bound to <kbd>SUPER</kbd>+<kbd>Home</kbd> in `hyprland.conf`.
+
 # Weather app
 
-to set it, first you need to:
+To set it up, first you need to:
 
 ```
 chmod u+x /home/yourusername/.config/waybar/scripts/waybar-wttr.py
@@ -210,6 +233,6 @@ sudo pacman -S python python-requests
 
 # You should be good to go!
 
-Now you can start customizing your own Hyprland on your own, or feel free to copy and paste from my dotfiles if you like my work. If you want to cooperate with me just contact me on Linkedin. Feel free to use it, copy it, fork it. That's the beauty of open source and sharing!
+Now you can start customizing Hyprland on your own, or feel free to copy and paste from my dotfiles if you like my work. If you want to collaborate with me, contact me on LinkedIn. Feel free to use, copy or fork it. That's the beauty of open source and sharing!
 
-In case I forgot to mention something or there are any errors please let me know!
+If I forgot to mention something or you spot any errors, please let me know!
